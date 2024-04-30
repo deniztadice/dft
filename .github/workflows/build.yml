@@ -1,4 +1,4 @@
-name: DFT CI
+name: DFT Build
 
 on:
   push:
