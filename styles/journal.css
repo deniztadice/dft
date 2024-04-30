@@ -24,6 +24,7 @@ aside.pf2e {
   display: flex;
   flex-flow: column;
   padding: 5px;
+  min-width: 200px;
   width: 30%;
   background-color: rgba(170, 199, 127, 0.4);
   box-shadow: 4px 4px 4px rgba(88, 126, 88, 0.4);
@@ -95,6 +96,7 @@ section.pf2e header h4.title {
   font-size: 1.5rem;
   margin: 0;
   text-shadow: rgb(0, 0, 0) 1px 0 10px;
+  color:white
 }
 
 section.pf2e header span.type {
