@@ -4,7 +4,7 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://deniztadice.github.io',
-  base: 'dft',
+  base: '/dft',
   integrations: [tailwind()],
   i18n: {
     defaultLocale: "uk",
