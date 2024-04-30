@@ -1,4 +1,4 @@
-name: my-module CI
+name: DFT CI
 
 on:
   push:
