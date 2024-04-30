@@ -1,0 +1,165 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import "../../../../../styles/journal.css";
+import "../../../../../styles/fonts.css";
+import Example from "../../../components/journal/Example.astro";
+import { SITE_NAME } from "../../../config";
+import Announce from "../../../components/Announce.astro";
+const category = "Journal";
+const title = "Examples";
+---
+
+<Layout title={category + " " + title}>
+  <main class="container mx-auto px-4">
+    <h1 class="font-bold text-2xl my-4">{SITE_NAME} - {category} - {title}</h1>
+    <Announce title="Mobile devices not supported, please, use bigger monitor" style="visible md:hidden" warning/>
+    <div class="container bg-white p-4" style="font-family: FixelText;">
+      <Example
+        title="ASIDE RIGHT"
+        code=`
+<aside class="pf2e right">
+    <header>
+        <h4 class="title">ASIDE RIGHT</h4>
+        <span class="type">Description</span>
+    </header>
+    <p>TEXT</p>
+</aside>
+            `
+        lang="html"
+      />
+      <Example
+        title="ASIDE LEFT"
+        code=`
+<aside class="pf2e left">
+    <header>
+        <h4 class="title">ASIDE LEFT</h4>
+        <span class="type">Description</span>
+    </header>
+    <p>TEXT</p>
+</aside>
+            `
+        lang="html"
+      />
+      <Example
+        title="Description"
+        style="w-1/2 mx-auto"
+        code=`
+<div id="example">
+    <section class="pf2e description">
+        <p>TEXT</p>
+    </section>
+</div>
+            `
+        lang="html"
+      />
+      <Example
+        title="ENCOUNTER"
+        style="w-1/2 mx-auto"
+        code=`
+<section class="pf2e encounter">
+    <header class="encounter-img">
+        <h4 class="title">ENCOUNTER</h4>
+        <span class="type">TYPE</span>
+    </header>
+    <p>TEXT</p>
+</section>
+            `
+        lang="html"
+      />
+      <Example
+        title="TREASURE"
+        style="w-1/2 mx-auto"
+        code=`
+<section class="pf2e treasure">
+    <header class="treasure-img">
+        <h4 class="title">TREASURE</h4>
+        <span class="type">TYPE</span>
+    </header>
+    <p>TEXT</p>
+</section>
+            `
+        lang="html"
+      />
+      <Example
+        title="ITEM"
+        style="w-1/2 mx-auto"
+        code=`
+<section class="pf2e item">
+    <header class="item-img">
+        <h4 class="title">ITEM</h4>
+        <span class="type">Type</span>
+    </header>
+    <p>TEXT</p>
+</section>
+            `
+        lang="html"
+      />
+      <Example
+        title="FVTT"
+        style="w-1/2 mx-auto"
+        code=`
+<section class="pf2e fvtt">
+    <header class="fvtt-img">
+        <h4 class="title">FVTT</h4>
+        <span class="type">Type</span>
+    </header>
+    <p>TEXT</p>
+</section>
+            `
+        lang="html"
+      />
+      <Example
+        title="REWARD"
+        style="w-1/2 mx-auto"
+        code=`
+<section class="pf2e reward">
+    <header class="reward-img">
+        <h4 class="title">REWARD</h4>
+        <span class="type">EXP</span>
+    </header>
+    <p>TEXT</p>
+</section>
+            `
+        lang="html"
+      />
+      <Example
+        title="PLAYER"
+        style="w-1/2 mx-auto"
+        code=`
+<section class="pf2e player">
+    <header class="player-img">
+        <h4 class="title">PLAYER</h4>
+        <span class="type">Type</span>
+    </header>
+    <p>TEXT</p>
+</section>
+            `
+        lang="html"
+      />
+      <Example
+        title="PET"
+        style="w-1/2 mx-auto"
+        code=`
+<section class="pf2e pet">
+    <header class="pet-img">
+        <h4 class="title">PET</h4>
+        <span class="type">Type</span>
+    </header>
+    <p>TEXT</p>
+</section>
+            `
+        lang="html"
+      />
+      <Example
+        title="Default box"
+        style="w-1/2 mx-auto"
+        code=`
+<section class="pf2e default-box">
+    <p>TEXT</p>
+</section>
+            `
+        lang="html"
+      />
+    </div>
+  </main>
+</Layout>

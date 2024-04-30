@@ -1,0 +1,22 @@
+---
+import Code from 'astro/components/Code.astro'
+import type { BundledLanguage } from 'shiki/dist/types.mjs'
+
+const {title, code, lang, style} = Astro.props
+interface Props {
+    title?: string,
+    code: string,
+    lang?: BundledLanguage,
+    style?: string
+}
+
+console.log(title, lang)
+---
+<div class="mb-4 flex flex-col">
+    {title===undefined ? undefined : <h2 class="text-xl font-extrabold my-4 uppercase mx-auto">{title}</h2>}
+    <div class=`my-4 ${style ? style : ''}` set:html={code}></div>
+    <div>
+        <h3 class="my-4 text-md font-bold">Code</h3>
+        <Code code={code} lang={lang} theme={'github-light'} />
+    </div>
+</div>

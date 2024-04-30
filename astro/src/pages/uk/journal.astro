@@ -1,0 +1,50 @@
+---
+import Card from "../../components/Card.astro";
+import ListCard from "../../components/ListCard.astro";
+import { SITE_NAME } from "../../config";
+import Layout from "../../layouts/Layout.astro";
+
+const category = "Journal";
+---
+
+<Layout title={category}>
+  <main class="container mx-auto px-4">
+    <h1 class="font-bold text-2xl my-4">{SITE_NAME} - {category}</h1>
+
+    <ListCard title="Menu">
+      <Card
+        title="Showcase"
+        description="How it looks like"
+        route="/dft/uk/journal/showcase"
+      />
+      <Card
+        title="Examples"
+        description="With code"
+        route="/dft/uk/journal/examples"
+      />
+    </ListCard>
+
+    <ListCard title="Social links">
+      <Card
+        title="Website"
+        description="deniztadice.xyz"
+        route="https://deniztadice.xyz/"
+      />
+      <Card
+        title="Telegram"
+        description="@deniztadice"
+        route="https://t.me/+7a6lEbj6lvZjMjIy"
+      />
+      <Card
+        title="YouTube"
+        description="@deniz_ta_dice"
+        route="https://www.youtube.com/@deniz_ta_dice"
+      />
+      <Card
+        title="Steam"
+        description="dk_denizkose"
+        route="https://steamcommunity.com/id/dk_denizkose/"
+      />
+    </ListCard>
+  </main>
+</Layout>

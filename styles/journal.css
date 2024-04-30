@@ -28,7 +28,7 @@ aside.pf2e {
   width: 30%;
   background-color: rgba(170, 199, 127, 0.4);
   box-shadow: 4px 4px 4px rgba(88, 126, 88, 0.4);
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 aside.pf2e.right {

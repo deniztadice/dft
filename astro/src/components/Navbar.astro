@@ -1,0 +1,29 @@
+---
+import { NAVBAR_MENU } from "../config";
+import Clipboard from "../components/Clipboard.astro";
+---
+
+<nav
+  class="flex flex-col text-center text-white sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-blue-500 shadow sm:items-baseline w-full">
+  <div class="mb-2 sm:mb-0">
+    <a
+      href="/dft"
+      class="text-2xl no-underline text-grey-darkest hover:text-blue-dark"
+      >Home</a
+    >
+  </div>
+  <div>
+    {
+      NAVBAR_MENU.map((menu) => (
+        <a
+          href={menu[1]}
+          class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">
+          {menu[0]}
+        </a>
+      ))
+    }
+  </div>
+</nav>
+<div class="w-11/12 mx-auto my-3">
+  <Clipboard />
+</div>

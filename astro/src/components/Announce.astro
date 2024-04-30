@@ -1,0 +1,18 @@
+---
+const {title, style, warning, alert, info, tip } = Astro.props
+interface Props {
+    title:string;
+    style?:string;
+    warning?: boolean; 
+    alert?: boolean; 
+    info?: boolean; 
+    tip?: boolean;
+}
+---
+
+{warning ? 
+<div class={`rounded-lg mx-auto bg-amber-600 text-white font-bold p-3 my-3 ${style}`}>
+    <p>{title}</p>
+</div>
+:
+undefined}
