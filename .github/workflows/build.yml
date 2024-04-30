@@ -15,7 +15,7 @@ jobs:
       id: set-version
       run: |
         echo "version=$(node ./.github/workflows/set-version.js ${{ github.ref }})"
-        ::set-output name=version::$version  # Set output variable
+        ::set-output name=version::$version
     - run: zip -r ./dft.zip module.json lang/ scripts/ images/ fonts/ scripts/ styles/
     - run: echo "${{ steps.set-version.outputs.version }}"  # Access output variable
     - name: Create Release
