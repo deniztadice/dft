@@ -1,0 +1,36 @@
+{
+  "id": "dft",
+  "title": "Deniz's Foundry Tools",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11"
+  },
+  "authors": [
+    {
+      "name": "Deniz Köse",
+      "url": "deniztadice.xyz",
+      "discord": "denizkose"
+    }
+  ],
+  "esmodules": [
+    "scripts/welcome.js"
+  ],
+  "styles":[
+    "styles/journal.css"
+  ],
+  "languages": [
+    {
+      "lang": "uk",
+      "name": "Українська",
+      "path": "lang/uk.json",
+      "flags": {}
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    }
+  ]
+}
