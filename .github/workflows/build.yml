@@ -22,7 +22,7 @@ jobs:
         VERSION: ${{ steps.set-version.outputs.version }}
       with:
         allowUpdates: true
-        name: Release $VERSION
+        name: Release ${{ env.VERSION }}
         draft: false
         prerelease: false
         token: ${{ secrets.GITHUB_TOKEN }}
