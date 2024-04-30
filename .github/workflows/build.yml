@@ -13,8 +13,8 @@ jobs:
     - name: Update Version
       shell: bash
       id: set-version
-      run: echo "{name}={version::$(node ./.github/workflows/set-version.js ${{ github.ref }})}" >> $GITHUB_OUTPUT
-    - run: zip -r ./my-module.zip module.json lang/ scripts/ images/ fonts/ scripts/ styles/
+      run: echo "{verison}={$(node ./.github/workflows/set-version.js ${{ github.ref }})}" >> $GITHUB_OUTPUT
+    - run: zip -r ./dft.zip module.json lang/ scripts/ images/ fonts/ scripts/ styles/
     - name: Create Release
       id: create_versioned_release
       uses: ncipollo/release-action@v1
