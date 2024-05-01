@@ -1,18 +1,24 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
 import "../../../../../styles/journal.css";
 import "../../../../../styles/fonts.css";
-import Example from "../../../components/journal/Example.astro";
-import { SITE_NAME } from "../../../config";
 import Announce from "../../../components/Announce.astro";
-const category = "Journal";
-const title = "Examples";
+import Example from "../../../components/journal/Example.astro";
+import Layout from "../../../layouts/Layout.astro";
+import { t, changeLanguage } from "i18next";
+
+changeLanguage("en");
 ---
 
-<Layout title={category + " " + title}>
+<Layout title=`${t("pages.journal")} - ${t("pages.journal_examples")}`>
   <main class="container mx-auto px-4">
-    <h1 class="font-bold text-2xl my-4">{SITE_NAME} - {category} - {title}</h1>
-    <Announce title="Mobile devices not supported, please, use bigger monitor" style="visible md:hidden" warning/>
+    <h1 class="font-bold text-2xl my-4">
+      {t("site.title")} - {t("pages.journal")} - {t("pages.journal_examples")}
+    </h1>
+    <Announce
+      title={t("announces.mobile_not_supported")}
+      style="visible md:hidden"
+      warning
+    />
     <div class="container bg-white p-4" style="font-family: FixelText;">
       <Example
         title="ASIDE RIGHT"
@@ -42,7 +48,7 @@ const title = "Examples";
       />
       <Example
         title="Description"
-        style="w-1/2 mx-auto"
+        style="md:w-1/2 md:mx-auto"
         code=`
 <div id="example">
     <section class="pf2e description">
@@ -54,7 +60,7 @@ const title = "Examples";
       />
       <Example
         title="ENCOUNTER"
-        style="w-1/2 mx-auto"
+        style="md:w-1/2 md:mx-auto"
         code=`
 <section class="pf2e encounter">
     <header class="encounter-img">
@@ -68,7 +74,7 @@ const title = "Examples";
       />
       <Example
         title="TREASURE"
-        style="w-1/2 mx-auto"
+        style="md:w-1/2 md:mx-auto"
         code=`
 <section class="pf2e treasure">
     <header class="treasure-img">
@@ -82,7 +88,7 @@ const title = "Examples";
       />
       <Example
         title="ITEM"
-        style="w-1/2 mx-auto"
+        style="md:w-1/2 md:mx-auto"
         code=`
 <section class="pf2e item">
     <header class="item-img">
@@ -96,7 +102,7 @@ const title = "Examples";
       />
       <Example
         title="FVTT"
-        style="w-1/2 mx-auto"
+        style="md:w-1/2 md:mx-auto"
         code=`
 <section class="pf2e fvtt">
     <header class="fvtt-img">
@@ -110,7 +116,7 @@ const title = "Examples";
       />
       <Example
         title="REWARD"
-        style="w-1/2 mx-auto"
+        style="md:w-1/2 md:mx-auto"
         code=`
 <section class="pf2e reward">
     <header class="reward-img">
@@ -124,7 +130,7 @@ const title = "Examples";
       />
       <Example
         title="PLAYER"
-        style="w-1/2 mx-auto"
+        style="md:w-1/2 md:mx-auto"
         code=`
 <section class="pf2e player">
     <header class="player-img">
@@ -138,7 +144,7 @@ const title = "Examples";
       />
       <Example
         title="PET"
-        style="w-1/2 mx-auto"
+        style="md:w-1/2 md:mx-auto"
         code=`
 <section class="pf2e pet">
     <header class="pet-img">
@@ -152,7 +158,7 @@ const title = "Examples";
       />
       <Example
         title="Default box"
-        style="w-1/2 mx-auto"
+        style="md:w-1/2 md:mx-auto"
         code=`
 <section class="pf2e default-box">
     <p>TEXT</p>

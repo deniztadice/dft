@@ -1,27 +1,28 @@
 ---
-import Navbar from '../components/Navbar.astro';
+import Navbar from "../components/Navbar.astro";
+import i18next, { t } from "i18next";
+import { HeadHrefLangs } from "astro-i18next/components";
 
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
-
-
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" href="/favicon.webp" />
-		<title>{title}</title>
-	</head>
+<html lang={i18next.language}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={t("site.title")} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.webp" />
+    <title>{title}</title>
+    <HeadHrefLangs />
+  </head>
 
-	<body class="bg-blue-300">
-	<Navbar/>
-		<slot />
-	</body>
+  <body class="bg-blue-300">
+    <Navbar />
+    <slot />
+  </body>
 </html>

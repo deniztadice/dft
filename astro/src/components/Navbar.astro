@@ -1,29 +1,136 @@
 ---
-import { NAVBAR_MENU } from "../config";
 import Clipboard from "../components/Clipboard.astro";
+import { t } from "i18next";
+import { localizePath } from "astro-i18next";
+import LocaleSwitcher from "./LocaleSwitcher.astro";
+import { NAVBAR_MENU } from "../config";
 ---
 
-<nav
-  class="flex flex-col text-center text-white sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-blue-500 shadow sm:items-baseline w-full">
-  <div class="mb-2 sm:mb-0">
-    <a
-      href="/dft"
-      class="text-2xl no-underline text-grey-darkest hover:text-blue-dark"
-      >Home</a
-    >
-  </div>
-  <div>
-    {
-      NAVBAR_MENU.map((menu) => (
-        <a
-          href={menu[1]}
-          class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">
-          {menu[0]}
-        </a>
-      ))
-    }
+<nav class="bg-gray-800 text-white">
+  <div class="container mx-auto px-4 md:flex items-center gap-6">
+    <!-- Logo -->
+    <div class="flex items-center justify-between md:w-auto w-full">
+      <a
+        href={localizePath("/dft")}
+        class="flex items-center py-5 px-2 text-white flex-1">
+        <span class="font-bold">{t("site.title")}</span>
+      </a>
+
+      <div class="mx-2 md:hidden"><LocaleSwitcher /></div>
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden flex items-center">
+        <button class="mobile-menu-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24">
+            <title>bars-3-bottom-left</title>
+            <g fill="none">
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Primary Navigation -->
+    <div
+      class="hidden md:flex md:flex-row flex-col items-center justify-start md:space-x-1 navigation-menu pb-3 md:pb-0 navigation-menu">
+      <!-- Dropdown Menu -->
+
+      {
+        NAVBAR_MENU.map((item) =>
+          item[2]?.length > 0 ? (
+            <div class="relative">
+              <button class="dropdown-toggle py-2 px-3 hover:bg-gray-700 flex items-center gap-2 rounded">
+                <span class="pointer-events-none">{t(item[0])}</span>
+                <svg
+                  class="w-3 h-3 pointer-events-none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24">
+                  <title>chevron-down</title>
+                  <g fill="none">
+                    <path
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <div class="dropdown-menu absolute hidden bg-gray-700 text-white rounded-b-lg pb-2 w-48">
+                {item[2]?.map((subitem) => (
+                  <a
+                    href={localizePath(subitem[1])}
+                    class="block px-6 py-2 hover:bg-gray-800">
+                    {t(subitem[0])}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <a href={localizePath(item[1])} class="py-2 px-3 block">
+              {t(item[0])}
+            </a>
+          )
+        )
+      }
+    </div>
+    <div class="hidden md:block"><LocaleSwitcher /></div>
   </div>
 </nav>
+
 <div class="w-11/12 mx-auto my-3">
   <Clipboard />
 </div>
+
+<script is:inline>
+  // Select all dropdown toggle buttons
+  const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+  dropdownToggles.forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      // Find the next sibling element which is the dropdown menu
+      const dropdownMenu = toggle.nextElementSibling;
+
+      // Toggle the 'hidden' class to show or hide the dropdown menu
+      if (dropdownMenu.classList.contains("hidden")) {
+        // Hide any open dropdown menus before showing the new one
+        document.querySelectorAll(".dropdown-menu").forEach((menu) => {
+          menu.classList.add("hidden");
+        });
+
+        dropdownMenu.classList.remove("hidden");
+      } else {
+        dropdownMenu.classList.add("hidden");
+      }
+    });
+  });
+
+  // Optional: Clicking outside of an open dropdown menu closes it
+  window.addEventListener("click", (event) => {
+    if (!event.target.matches(".dropdown-toggle")) {
+      document.querySelectorAll(".dropdown-menu").forEach((menu) => {
+        if (!menu.contains(event.target)) {
+          menu.classList.add("hidden");
+        }
+      });
+    }
+  });
+
+  const mobileMenuButton = document.querySelector(".mobile-menu-button");
+  const mobileMenu = document.querySelector(".navigation-menu");
+
+  mobileMenuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>

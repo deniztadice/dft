@@ -1,18 +1,23 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
 import "../../../../../styles/journal.css";
 import "../../../../../styles/fonts.css";
-import { SITE_NAME } from "../../../config";
 import Announce from "../../../components/Announce.astro";
+import Layout from "../../../layouts/Layout.astro";
+import { t, changeLanguage } from "i18next";
 
-const category = "Journal";
-const title = "Showcase";
+changeLanguage("en");
 ---
 
-<Layout title={category + " " + title}>
+<Layout title=`${t("pages.journal")} - ${t("pages.journal_showcase")}`>
   <main class="container mx-auto px-4">
-    <h1 class="font-bold text-2xl my-4">{SITE_NAME} - {category} - {title}</h1>
-    <Announce title="Mobile devices not supported, please, use bigger monitor" style="visible md:hidden" warning/>
+    <h1 class="font-bold text-2xl my-4">
+      {t("site.title")} - {t("pages.journal")} - {t("pages.journal_showcase")}
+    </h1>
+    <Announce
+      title={t("announces.mobile_not_supported")}
+      style="visible md:hidden"
+      warning
+    />
     <div class="container bg-white p-4" style="font-family: FixelText;">
       <aside class="pf2e right">
         <header>

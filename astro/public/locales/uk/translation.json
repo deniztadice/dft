@@ -1,0 +1,31 @@
+{
+  "site": {
+    "title": "Інструменти Деніза для Foundry",
+    "description": "Модуль для Foundry VTT"
+  },
+  "pages": {
+    "index":"Головна",
+    "index_menu":"Меню",
+    "index_components":"Компоненти модуля",
+    "index_social_links":"Соціальні посилання",
+    "github_title":"Github",
+    "github":"Релізи",
+    "github_desc":"Актуальні релізи",
+    "journal": "Журнал",
+    "journal_desc": "Кастомні текстові блоки",
+    "journal_examples": "Приклади",
+    "journal_examples_desc": "З кодом",
+    "journal_examples_code": "Код",
+    "journal_showcase": "Вітрина",
+    "journal_showcase_desc": "Як це виглядає"
+  },
+  "announces": {
+    "mobile_not_supported": "Мобільні пристрої не підтримуються, будь ласка, використовуйте більший екран"
+  },
+  "social": {
+    "website":"Вебсайт",
+    "telegram":"Telegram",
+    "youtube":"YouTube",
+    "steam":"Steam"
+  }
+}

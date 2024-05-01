@@ -1,0 +1,28 @@
+---
+import Card from "./Card.astro";
+import ListCard from "./ListCard.astro";
+import { t } from "i18next";
+---
+
+<ListCard title={t("pages.index_social_links")}>
+  <Card
+    title={t("social.website")}
+    description="deniztadice.xyz"
+    route="https://deniztadice.xyz/"
+  />
+  <Card
+    title={t("social.telegram")}
+    description="@deniztadice"
+    route="https://t.me/+sVQGdhKrVuM1NGIy"
+  />
+  <Card
+    title={t("social.youtube")}
+    description="@deniz_ta_dice"
+    route="https://www.youtube.com/@deniz_ta_dice"
+  />
+  <Card
+    title={t("social.steam")}
+    description="dk_denizkose"
+    route="https://steamcommunity.com/id/dk_denizkose/"
+  />
+</ListCard>

@@ -1,0 +1,31 @@
+{
+  "site": {
+    "title": "Deniz's Foundry Tools",
+    "description": "Module for Foundry VTT"
+  },
+  "pages": {
+    "index":"Main",
+    "index_menu":"Menu",
+    "index_components":"Components of module",
+    "index_social_links":"Social links",
+    "github_title":"Github",
+    "github":"Releases",
+    "github_desc":"Actual releases",
+    "journal": "Journal ",
+    "journal_desc": "Custom text blocks",
+    "journal_examples": "Examples",
+    "journal_examples_desc": "With code",
+    "journal_examples_code": "Code",
+    "journal_showcase": "Showcase",
+    "journal_showcase_desc": "How it looks like"
+  },
+  "announces": {
+    "mobile_not_supported": "Mobile devices not supported, please, use bigger display"
+  },
+  "social": {
+    "website":"Website 🇺🇦",
+    "telegram":"Telegram 🇺🇦",
+    "youtube":"YouTube 🇺🇦",
+    "steam":"Steam"
+  }
+}
