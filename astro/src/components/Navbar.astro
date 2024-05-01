@@ -48,7 +48,7 @@ import { NAVBAR_MENU } from "../config";
           item[2]?.length > 0 ? (
             <div class="relative">
               <button class="dropdown-toggle py-2 px-3 hover:bg-gray-700 flex items-center gap-2 rounded">
-                <span class="pointer-events-none">{t(item[0])}</span>
+                <span class="pointer-events-none">{t(String(item[0]))}</span>
                 <svg
                   class="w-3 h-3 pointer-events-none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +68,7 @@ import { NAVBAR_MENU } from "../config";
                 </svg>
               </button>
               <div class="dropdown-menu absolute hidden bg-gray-700 text-white rounded-b-lg pb-2 w-48">
-                {item[2]?.map((subitem) => (
+                {(item[2] as (any | string | string[])[])?.map((subitem: (any | string | string[])[]) => (
                   <a
                     href={localizePath(subitem[1])}
                     class="block px-6 py-2 hover:bg-gray-800">
@@ -78,8 +78,8 @@ import { NAVBAR_MENU } from "../config";
               </div>
             </div>
           ) : (
-            <a href={localizePath(item[1])} class="py-2 px-3 block">
-              {t(item[0])}
+            <a href={localizePath(String(item[1]))} class="py-2 px-3 block">
+              {t(String(item[0]))}
             </a>
           )
         )

@@ -34,6 +34,13 @@ importers:
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
+    devDependencies:
+      locale-emoji:
+        specifier: ^0.3.0
+        version: 0.3.0
+      shiki:
+        specifier: ^1.4.0
+        version: 1.4.0
 
 packages:
 

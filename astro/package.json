@@ -26,5 +26,9 @@
 		"patchedDependencies": {
 			"astro-i18next@1.0.0-beta.21": "patches/astro-i18next@1.0.0-beta.21.patch"
 		}
+	},
+	"devDependencies": {
+		"locale-emoji": "^0.3.0",
+		"shiki": "^1.4.0"
 	}
 }
