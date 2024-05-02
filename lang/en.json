@@ -1,7 +1,17 @@
 {
     "DFT.MAIN.NAME":"Deniz's Foundry Tools",
+    "DFT.MAIN.NAME_SHORT":"DFT",
     "DFT.MAIN.WELCOME.HEADER":"Thank you for installing this module!",
-    "DFT.MAIN.WELCOME.CONTENT":"More content on my social media",
+    "DFT.MAIN.WELCOME.MORE":"More content in my social media",
+    "DFT.MAIN.WELCOME.READFIRST":"For beginning read",
+    "DFT.MAIN.WELCOME.INFORMATION":"Information",
     "DFT.MAIN.WELCOME.BUTTON":"Let's go!",
-    "DFT.MAIN.WELCOME.DONTSHOWME":"Don't show me again"
+    "DFT.MAIN.WELCOME.DONTSHOWME":"Don't show me again",
+    "DFT.SOCIAL.GITHUB":"GitHub",
+    "DFT.SOCIAL.DISCORD":"Discord",
+    "DFT.SOCIAL.TELEGRAM":"Telegram",
+    "DFT.SOCIAL.WEBSITE":"Website",
+    "DFT.SETTINGS.BABELE_TITLE":"Automatically activate translation via Babele",
+    "DFT.SETTINGS.BABELE_DESC":"Automatically implements Babele translations without needing to point to the directory containing the translations.",
+    "DFT.SIDEBAR.SETTINGS.BUTTON.README":"Readme"
 }

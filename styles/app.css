@@ -1,0 +1,55 @@
+@import url("fonts.css");
+
+.dft-container {
+  margin: 0 auto;
+}
+
+.dft-welcome-dialog {
+  font-family: "FixelText";
+  display: flex;
+  flex-flow: column;
+}
+
+.dft-welcome-dialog h2 {
+font-size: 1.2rem;
+}
+
+.dft-welcome-dialog p {
+  font-size: 0.9rem;
+}
+
+.dft-welcome-dialog ul {
+  padding-left: 25px;
+}
+.dft-welcome-dialog li {
+  width: fit-content;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.dft-welcome-dialog li a {
+  text-decoration: none;
+}
+
+.dft-welcome-dialog a[data-tooltip="Text Page"] {
+  background: #ff6f1c;
+  color: white;
+  font-weight: 600;
+  padding: 4px 6px;
+  border: 1px solid black;
+  border-radius: 2px;
+  white-space: nowrap;
+  word-break: break-all;
+  font-size: 0.85rem;
+}
+.dft-welcome-dialog a[data-tooltip="Text Page"] i {
+  margin-right: 4px;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.dft-sidebar button {
+  font-family: 'FixelText';
+  font-weight: 600;
+  font-size: var(--font-size-13);
+}

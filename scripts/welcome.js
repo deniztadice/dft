@@ -1,50 +1,21 @@
-const log = (log) => {
-    console.log(modName + log, consoleStyle)
-}
-
-const modName = '%c[DFT] | '
-const consoleStyle = 'color: green; font-weight:bold'
-const ls = localStorage
-const option = JSON.parse(ls.getItem('dftWelcome'))?.option ? true : false
-
-Hooks.once("init", async () => {
-    log("Loading")
-})
-
-Hooks.once("i18nInit", function () {
-})
-
-Hooks.once("ready", function () {
-
-    const sidebarInfo = document.getElementById('game-details')
-    const moduleDetail = `
-    <hr>
-    <li class="system flexrow">
-        <span class="system-title">${game.i18n.localize("DFT.MAIN.NAME")}</span>
-        <span class="system-info">
-            5.13.6
-        </span>
-    </li>
-    <li class="flexrow system-links">
-    <a href="#" target="_blank">GitHub</a>
-    <a href="https://discord.gg/VDNvWvJMYd" target="_blank">Discord</a>
-    <a href="https://t.me/deniz_ta_dice" target="_blank">Telegram</a>
-    <a href="https://deniztadice.xyz/" target="_blank">WebSite</a>
-    </li>
-    `
-    sidebarInfo.innerHTML += moduleDetail
-
+import { log } from "./utils.js";
+export const welcomeDialog = () => {
+    const ls = localStorage
+    const option = JSON.parse(ls.getItem('dftWelcome'))?.option ? true : false
     let d = new Dialog({
         title: game.i18n.localize("DFT.MAIN.NAME"),
         content: `
+        <div class="dft-welcome-dialog" style="width:450px; height:auto">
         <h2>${game.i18n.localize("DFT.MAIN.WELCOME.HEADER")}</h2>
-        <p>${game.i18n.localize("DFT.MAIN.WELCOME.CONTENT")}</p>
-        <ul>
-        <li><a href="https://github.com/deniztadice" target="_blank">GitHub</a></li>
-        <li><a href="https://discord.gg/VDNvWvJMYd" target="_blank">Discord</a></li>
-        <li><a href="https://t.me/deniz_ta_dice" target="_blank">Telegram</a></li>
-        <li><a href="https://deniztadice.xyz/" target="_blank">WebSite</a></li>
+        <p>${game.i18n.localize("DFT.MAIN.WELCOME.READFIRST")} <a class="content-link" draggable="true" data-uuid="Compendium.dft.dft-information.JournalEntry.4yCW3MHkNqswLPWD.JournalEntryPage.QJJPtUoUn5H8WGq8" data-id="QJJPtUoUn5H8WGq8" data-type="JournalEntryPage" data-pack="dft.dft-information" data-tooltip="Text Page"><i class="fas fa-file-lines"></i>${game.i18n.localize("DFT.MAIN.WELCOME.INFORMATION")}</a></p>
+        <p>${game.i18n.localize("DFT.MAIN.WELCOME.MORE")}</p>
+        <ul class="fa-ul">
+        <li class="fa-li"><span class="fa-li"><i class="fa-brands fa-github"></i></span><a href="https://deniztadice.github.io/dft" target="_blank">${game.i18n.localize("DFT.SOCIAL.GITHUB")}</a> 🇺🇦🇺🇸 </li>
+        <li class="fa-li"><span class="fa-li"><i class="fa-brands fa-discord"></i></span><a href="https://discord.gg/VDNvWvJMYd" target="_blank">${game.i18n.localize("DFT.SOCIAL.DISCORD")}</a> 🇺🇦</li>
+        <li class="fa-li"><span class="fa-li"><i class="fa-brands fa-telegram"></i></span><a href="https://t.me/deniz_ta_dice" target="_blank">${game.i18n.localize("DFT.SOCIAL.TELEGRAM")}</a> 🇺🇦</li>
+        <li class="fa-li"><span class="fa-li"><i class="fa-solid fa-globe"></i></span><a href="https://deniztadice.xyz/" target="_blank">${game.i18n.localize("DFT.SOCIAL.WEBSITE")}</a> 🇺🇦</li>
         </ul>
+        </div>
         `,
         buttons: {
             one: {
@@ -59,7 +30,8 @@ Hooks.once("ready", function () {
         },
         default: "two",
     });
+    return option ? log('Skip welcome') : d.render(true)
+}
 
-    log("Loaded")
-    option ? log('Skip welcome') : d.render(true)
-});
+
+

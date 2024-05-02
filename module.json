@@ -14,10 +14,14 @@
     }
   ],
   "esmodules": [
-    "scripts/welcome.js"
+    "scripts/utils.js",
+    "scripts/welcome.js",
+    "scripts/babele-register.js",
+    "scripts/index.js"
   ],
-  "styles":[
-    "styles/journal.css"
+  "styles": [
+    "styles/journal.css",
+    "styles/app.css"
   ],
   "languages": [
     {
@@ -32,5 +36,25 @@
       "path": "lang/en.json",
       "flags": {}
     }
-  ]
+  ],
+  "packs": [
+    {
+      "name": "dft-information",
+      "label": "DFT Information",
+      "path": "packs/dft-information",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "relationships": {
+    "recommends": [
+      {
+        "id": "babele",
+        "type": "module"
+      }
+    ]
+  }
 }
