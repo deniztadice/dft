@@ -4,7 +4,7 @@ import { registerBabele } from "./babele-register.js";
 
 Hooks.once("init", async () => {
     log("Loading module")
-    registerBabele(MODULE_ID)
+    // registerBabele(MODULE_ID)
 })
 
 Hooks.once("ready", function () {

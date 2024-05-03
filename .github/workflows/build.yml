@@ -18,7 +18,7 @@ jobs:
           echo "::add-mask::$new_version"
           echo $new_version
           echo "version=$new_version" >> "$GITHUB_OUTPUT"
-    - run: zip -r ./dft.zip module.json lang/ scripts/ images/ fonts/ scripts/ styles/
+    - run: zip -r ./module.zip module.json lang/ scripts/ images/ fonts/ packs/ styles/
     - name: Create Release
       id: create_versioned_release
       uses: ncipollo/release-action@v1
@@ -28,4 +28,4 @@ jobs:
         draft: false
         prerelease: false
         token: ${{ secrets.GITHUB_TOKEN }}
-        artifacts: './module.json,./dft.zip'
+        artifacts: './module.json,./module.zip'
