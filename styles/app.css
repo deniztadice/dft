@@ -48,8 +48,40 @@ font-size: 1.2rem;
   font-size: 0.8rem;
 }
 
+.dft-welcome-dialog p.support {
+  text-align: center;
+  font-size: medium;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.dft-welcome-dialog p.support > a {
+  text-decoration: none;
+  background-color: #ff6f1c;
+  padding: 6px;
+  border-radius: 4px;
+  color: white;
+  box-shadow: 4px 4px 4px rgb(0 0 0 / 20%);
+}
+.dft-welcome-dialog p.support > a > i {
+  color: rgb(163, 0, 0);
+}
+
+.dft-welcome-dialog p.support > a:hover {
+  box-shadow: 4px 4px 4px rgb(0 0 0 / 40%);
+}
 .dft-sidebar button {
   font-family: 'FixelText';
   font-weight: 600;
   font-size: var(--font-size-13);
+}
+
+li.dft-sidebar {
+  margin-top: 4px;
+}
+
+li.dft-sidebar a {
+  font-family: 'FixelText';
+  text-decoration: none;
+  font-weight: 600;
 }

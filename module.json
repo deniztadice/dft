@@ -1,6 +1,6 @@
 {
   "id": "dft",
-  "title": "Deniz's Foundry Tools",
+  "title": "⚒️ Deniz's Foundry Tools | DFT | DTD",
   "version": "1.0.0",
   "compatibility": {
     "minimum": "11",
@@ -43,6 +43,18 @@
       "label": "DFT Information",
       "path": "packs/dft-information",
       "type": "JournalEntry",
+      "banner": "./modules/dft/images/packs/info.webp",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "dft-journal",
+      "label": "DFT Journal",
+      "path": "packs/dft-journal",
+      "type": "JournalEntry",
+      "banner": "./modules/dft/images/packs/journal.webp",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -53,17 +65,18 @@
     {
       "name": "DFT",
       "sorting": "a",
-      "packs": [],
+      "packs": ["dft-information"],
       "folders": [
         {
           "name": "Journal Component",
           "sorting": "m",
-          "color": "#ff00ff",
-          "packs": ["dft-information"]
+          "color": "#2d6876",
+          "packs": ["dft-journal"],
+          "folders": []
         }
       ]
     }
   ],
   "manifest": "https://github.com/deniztadice/dft/releases/latest/download/module.json",
-	"download": "https://github.com/deniztadice/dft/releases/latest/download/module.zip"
+  "download": "https://github.com/deniztadice/dft/releases/latest/download/module.zip"
 }

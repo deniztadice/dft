@@ -11,6 +11,8 @@
     "DFT.SOCIAL.DISCORD":"Discord",
     "DFT.SOCIAL.TELEGRAM":"Telegram",
     "DFT.SOCIAL.WEBSITE":"Вебсайт",
+    "DFT.SOCIAL.SUPPORT":"Підримати",
+    "DFT.SOCIAL.SUPPORT_FULL":"Підримати мене на Buy me a coffee",
     "DFT.SETTINGS.BABELE_TITLE":"Автоматично активувати переклад через Babele",
     "DFT.SETTINGS.BABELE_DESC":"Автоматично застосовує переклади Babele без необхідності вказувати теку з перекладами.",
     "DFT.SIDEBAR.SETTINGS.BUTTON.README":"Підручник"

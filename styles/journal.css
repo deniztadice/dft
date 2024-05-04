@@ -1,58 +1,234 @@
 @import url("fonts.css");
 
 /* Foundry reset */
-.journal-sheet-container {
+
+.editor-content.journal-page-content.ProseMirror,
+.journal-entry-content {
   font-family: "FixelText";
 }
+.editor-content.journal-page-content.ProseMirror p,
+.journal-entry-content p {
+  font-size: 15px;
+  line-height: 22px;
+}
 
+.journal-entry-content form.journal-header {
+  background-color: #ff8a0036;
+  border-radius: 4px;
+}
+.journal-entry-content input.title {
+  width: 100%;
+  font-weight: 800;
+  border: 1.5px solid darkred;
+}
+.editor-content.journal-page-content.ProseMirror h1,
+.editor-content.journal-page-content.ProseMirror h2,
+.editor-content.journal-page-content.ProseMirror h3,
+.editor-content.journal-page-content.ProseMirror h4,
+.editor-content.journal-page-content.ProseMirror h5,
+.editor-content.journal-page-content.ProseMirror h6,
+.journal-entry-content h1,
+.editor-container h1,
+.journal-entry-content h2,
+.editor-container h2,
+.journal-entry-content h3,
+.editor-container h3,
+.journal-entry-content h4,
+.editor-container h4,
+.journal-entry-content h5,
+.editor-container h5,
+.journal-entry-content h6,
+.editor-container h6 {
+  position: relative;
+  z-index: 0;
+  text-wrap: pretty;
+  margin: 5px 0;
+  padding: 5px 5px;
+}
+
+.editor-content.journal-page-content.ProseMirror h1,
+.journal-entry-content h1,
+.editor-container h1 {
+  font-size: 2em;
+  font-weight: 900;
+  border-top: 2px solid darkred;
+  border-bottom: 2px solid darkred;
+  text-align: center;
+  background-color: beige;
+}
+
+.editor-content.journal-page-content.ProseMirror h2,
+.journal-entry-content h2,
+.editor-container h2 {
+  font-size: 1.5em;
+    font-weight: 800;
+    border-top: 1.5px solid darkred;
+    border-bottom: 1.5px solid darkred;
+    background-color: beige;
+}
+
+.editor-content.journal-page-content.ProseMirror h3,
+.journal-entry-content h3,
+.editor-container h3 {
+  font-size: 1.3em;
+    font-weight: 700;
+    border-top: 1px solid darkred;
+    border-bottom: 1px solid darkred;
+    background-color: beige;
+}
+
+.editor-content.journal-page-content.ProseMirror h4,
+.journal-entry-content h4,
+.editor-container h4 {
+  font-weight: 600;
+  margin: 5px 0;
+  font-size: 1.2em;
+  border-bottom: 1px solid darkred;
+}
+
+.editor-content.journal-page-content.ProseMirror h5,
+.journal-entry-content h5,
+.editor-container h5 {
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.editor-content.journal-page-content.ProseMirror h6,
+.journal-entry-content h6,
+.editor-container h6 {
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.editor-content.journal-page-content.ProseMirror section.secret,
 section.secret {
   display: flex;
   flex-flow: column;
 }
 
+.editor-content.journal-page-content.ProseMirror button.reveal,
 button.reveal {
   width: 10%;
 }
 
-.journal-sheet-container p {
-  font-size: 0.9rem;
+/* Links */
+
+.journal-entry-content a.content-link {
+  background: #f5f5f5;
+  color: #000000;
+  font-weight: 500;
+  padding: 4px 6px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 0.85rem;
 }
+
+.journal-entry-content a.content-link i {
+  color: #616161;
+}
+
+.journal-entry-content a.content-link[data-type="Item"] {
+  background: #bbdefb;
+  color: #000000;
+}
+
+.journal-entry-content a.content-link[data-type="Actor"] {
+  background: #ffb3b3;
+  color: #000000;
+}
+
+.journal-entry-content a.content-link[data-type="RollTable"] {
+  background: #ff99f8;
+  color: #000000;
+}
+
+.journal-entry-content a.content-link[data-type="Cards"] {
+  background: #848484;
+  color: #ffffff;
+}
+
+.journal-entry-content a.content-link[data-type="Playlist"] {
+  background: #ba68c8;
+  color: #ffffff;
+}
+
+.journal-entry-content a.content-link[data-type="PlaylistSound"] {
+  background: #ce93d8;
+  color: #000000;
+}
+
+.journal-entry-content a.content-link[data-type="Scene"] {
+  background: #9dffa2;
+  color: #000000;
+}
+
+.journal-entry-content a.content-link[data-type="Folder"] {
+  background: #282222;
+  color: #ffffff;
+}
+
+.journal-entry-content a.inline-roll.roll,
+.journal-entry-content a.inline-check.with-repost {
+  padding: 4px;
+  font-weight: 500;
+  background-color: antiquewhite;
+}
+
+.journal-entry-content a.inline-roll.roll i,
+.journal-entry-content a.inline-check.with-repost i {
+  color: brown;
+}
+
+.journal-entry-content i[data-pf2-repost] {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  background: none;
+  color: #9e4141;
+  border-left: 2px solid var(--color-border-dark-tertiary);
+  margin-left: 3px;
+  text-shadow: none;
+  padding-left: 3px;
+}
+
 
 /* Aside */
 
-aside.pf2e {
+aside.dft {
   display: flex;
   flex-flow: column;
   padding: 5px;
   min-width: 200px;
   width: 30%;
-  background-color: rgba(170, 199, 127, 0.4);
+  background-color: rgba(170, 199, 127);
   box-shadow: 4px 4px 4px rgba(88, 126, 88, 0.4);
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 
-aside.pf2e.right {
+aside.dft.right {
   float: right;
   margin-left: 10px;
 }
 
-aside.pf2e.left {
+aside.dft.left {
   float: left;
   margin-right: 10px;
 }
 
-aside.pf2e header {
+aside.dft header {
   text-align: center;
 }
 
-aside.pf2e header h4.title {
+aside.dft p {
+  line-height: 18px;
+}
+
+aside.dft header span.title {
   margin: 0;
   text-transform: uppercase;
   margin-bottom: 10px;
   font-weight: 700;
 }
 
-aside.pf2e header span.type {
+aside.dft header span.type {
   font-weight: 300;
   font-style: italic;
   font-size: 0.8rem;
@@ -65,7 +241,7 @@ section {
   padding: 5px;
 }
 
-section.pf2e {
+section.dft {
   display: flex;
   flex-flow: column;
   padding: 0;
@@ -75,11 +251,11 @@ section.pf2e {
   min-width: 150px;
 }
 
-section.pf2e p {
+section.dft p {
   padding: 2px 5px;
 }
 
-section.pf2e header {
+section.dft header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,25 +268,39 @@ section.pf2e header {
   min-height: 40px;
 }
 
-section.pf2e header h4.title {
+section.dft header span.title,
+section.dft header span.title a {
   text-transform: uppercase;
   font-size: 1.5rem;
   margin: 0;
   text-shadow: rgb(0, 0, 0) 1px 0 10px;
-  color:white;
+  color: white;
   font-weight: 700;
 }
 
-section.pf2e header span.type {
+section.dft header span.type {
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 500;
   text-shadow: rgb(0, 0, 0) 1px 0 10px;
 }
 
+section.dft span.title a.content-link,
+section.dft span.title a.content-link i {
+  font-weight: 700;
+  border: 0;
+  background: none;
+  padding: 0;
+  border-radius: unset;
+  color: white;
+}
+section.dft span.title a.content-link:hover {
+  text-shadow: 4px 4px 4px rgba(148, 8, 8, 0.5);
+}
+
 /* Section description */
 
-section.pf2e.description {
+section.dft.description {
   display: flex;
   flex-flow: column;
   line-height: 1.4;
@@ -121,23 +311,22 @@ section.pf2e.description {
   border-bottom: 3px solid rgb(99, 17, 11);
   border-radius: 0;
   font-weight: 500;
-  font-size: 1.1rem;
 }
 
 /* Section encounter */
 
-section.pf2e header.encounter-img {
+section.dft header.encounter-img {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 82, 82, 0.25)),
     url("../images/journal/encounter.webp");
   background-position: center;
 }
 
-section.pf2e.encounter {
+section.dft.encounter {
   box-shadow: 4px 4px 4px rgba(124, 11, 11, 0.5);
   border: 2px solid #b82929;
 }
 
-section.pf2e.encounter hr {
+section.dft.encounter hr {
   border: 0;
   height: 1px;
   background: #b82929;
@@ -145,21 +334,9 @@ section.pf2e.encounter hr {
   width: 90%;
 }
 
-section.pf2e a[data-tooltip="NPC Actor"],
-section.pf2e a[data-tooltip="Hazard Actor"],
-
-section.pf2e a[data-tooltip="NPC Actor"] i,
-section.pf2e a[data-tooltip="Hazard Actor"] i {
-  font-weight: 700;
-  border: 0;
-  background: none;
-  padding: 0;
-  border-radius: unset;
-}
-
 /* Section item */
 
-section.pf2e header.item-img {
+section.dft header.item-img {
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(82, 128, 255, 0.25)
@@ -168,12 +345,12 @@ section.pf2e header.item-img {
   background-position: center;
 }
 
-section.pf2e.item {
+section.dft.item {
   box-shadow: 4px 4px 4px rgba(11, 69, 124, 0.5);
   border: 2px solid #294fb8;
 }
 
-section.pf2e.item hr {
+section.dft.item hr {
   border: 0;
   height: 1px;
   background: #294fb8;
@@ -181,18 +358,9 @@ section.pf2e.item hr {
   width: 90%;
 }
 
-section.pf2e a[data-tooltip="Item Actor"],
-section.pf2e a[data-tooltip="Item Actor"] i {
-  font-weight: 700;
-  border: 0;
-  background: none;
-  padding: 0;
-  border-radius: unset;
-}
-
 /* Section treasure */
 
-section.pf2e header.treasure-img {
+section.dft header.treasure-img {
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(255, 252, 82, 0.25)
@@ -201,12 +369,12 @@ section.pf2e header.treasure-img {
   background-position: center;
 }
 
-section.pf2e.treasure {
+section.dft.treasure {
   box-shadow: 4px 4px 4px rgba(124, 107, 11, 0.5);
   border: 2px solid #b8a329;
 }
 
-section.pf2e.treasure hr {
+section.dft.treasure hr {
   border: 0;
   height: 1px;
   background: #b8a329;
@@ -214,18 +382,9 @@ section.pf2e.treasure hr {
   width: 90%;
 }
 
-section.pf2e a[data-tooltip="Loot Actor"],
-section.pf2e a[data-tooltip="Loot Actor"] i {
-  font-weight: 700;
-  border: 0;
-  background: none;
-  padding: 0;
-  border-radius: unset;
-}
-
 /* Section fvtt */
 
-section.pf2e header.fvtt-img {
+section.dft header.fvtt-img {
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(255, 174, 82, 0.25)
@@ -234,12 +393,12 @@ section.pf2e header.fvtt-img {
   background-position: center;
 }
 
-section.pf2e.fvtt {
+section.dft.fvtt {
   box-shadow: 4px 4px 4px rgba(124, 79, 11, 0.5);
   border: 2px solid #b86e29;
 }
 
-section.pf2e.fvtt hr {
+section.dft.fvtt hr {
   border: 0;
   height: 1px;
   background: #b86e29;
@@ -247,18 +406,9 @@ section.pf2e.fvtt hr {
   width: 90%;
 }
 
-section.pf2e a[data-tooltip="Loot Actor"],
-section.pf2e a[data-tooltip="Loot Actor"] i {
-  font-weight: 700;
-  border: 0;
-  background: none;
-  padding: 0;
-  border-radius: unset;
-}
-
 /* Section reward */
 
-section.pf2e header.reward-img {
+section.dft header.reward-img {
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(146, 255, 82, 0.25)
@@ -267,12 +417,12 @@ section.pf2e header.reward-img {
   background-position: center;
 }
 
-section.pf2e.reward {
+section.dft.reward {
   box-shadow: 4px 4px 4px rgba(30, 124, 11, 0.5);
   border: 2px solid #46b829;
 }
 
-section.pf2e.reward hr {
+section.dft.reward hr {
   border: 0;
   height: 1px;
   background: #46b829;
@@ -280,14 +430,14 @@ section.pf2e.reward hr {
   width: 90%;
 }
 
-section.pf2e.reward span.type {
+section.dft.reward span.type {
   font-size: 2rem;
   font-weight: 900;
 }
 
 /* Section player */
 
-section.pf2e header.player-img {
+section.dft header.player-img {
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(220, 82, 255, 0.25)
@@ -296,12 +446,12 @@ section.pf2e header.player-img {
   background-position: center;
 }
 
-section.pf2e.player {
+section.dft.player {
   box-shadow: 4px 4px 4px rgba(124, 11, 124, 0.5);
   border: 2px solid #b829b8;
 }
 
-section.pf2e.player hr {
+section.dft.player hr {
   border: 0;
   height: 1px;
   background: #9b29b8;
@@ -309,18 +459,9 @@ section.pf2e.player hr {
   width: 90%;
 }
 
-section.pf2e a[data-tooltip="Player Character Actor"],
-section.pf2e a[data-tooltip="Player Character Actor"] i {
-  font-weight: 700;
-  border: 0;
-  background: none;
-  padding: 0;
-  border-radius: unset;
-}
-
 /* Section pet */
 
-section.pf2e header.pet-img {
+section.dft header.pet-img {
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(82, 249, 255, 0.25)
@@ -329,12 +470,12 @@ section.pf2e header.pet-img {
   background-position: center;
 }
 
-section.pf2e.pet {
+section.dft.pet {
   box-shadow: 4px 4px 4px rgba(11, 124, 118, 0.5);
   border: 2px solid #29b8b1;
 }
 
-section.pf2e.pet hr {
+section.dft.pet hr {
   border: 0;
   height: 1px;
   background: #29b8b1;
@@ -342,18 +483,9 @@ section.pf2e.pet hr {
   width: 90%;
 }
 
-section.pf2e a[data-tooltip="Familiar Actor"],
-section.pf2e a[data-tooltip="Familiar Actor"] i {
-  font-weight: 700;
-  border: 0;
-  background: none;
-  padding: 0;
-  border-radius: unset;
-}
-
 /* Default box */
 
-section.pf2e.default-box {
+section.dft.default-box {
   background-color: rgba(7, 26, 16, 0.63);
   color: white;
   font-weight: 500;

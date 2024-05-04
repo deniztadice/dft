@@ -16,11 +16,14 @@ export const addSidebarInfo = () => {
             ${MODULE_VERSION}
         </span>
     </li>
-    <li class="flexrow system-links">
+    <li class="flexrow system-links dft-sidebar">
     <a href="https://deniztadice.github.io/dft" target="_blank">${game.i18n.localize("DFT.SOCIAL.GITHUB")}</a>
         <a href="https://discord.gg/VDNvWvJMYd" target="_blank">${game.i18n.localize("DFT.SOCIAL.DISCORD")}</a>
         <a href="https://t.me/deniz_ta_dice" target="_blank">${game.i18n.localize("DFT.SOCIAL.TELEGRAM")}</a>
         <a href="https://deniztadice.xyz/" target="_blank">${game.i18n.localize("DFT.SOCIAL.WEBSITE")}</a>
+    </li>
+    <li class="flexrow system-links dft-sidebar">
+        <a href="https://buymeacoffee.com/denizkose" target="_blank">${game.i18n.localize("DFT.SOCIAL.SUPPORT")} <i class="fa-solid fa-heart fa-beat"></i></a>
     </li>
     <div id='dft-sidebar'></div>
     `
@@ -38,7 +41,7 @@ export const addSettingsSection = () => {
     helpButton.innerHTML = '<i class="fa-solid fa-circle-info"></i></i>' + game.i18n.localize("DFT.SIDEBAR.SETTINGS.BUTTON.README")
     helpButton.addEventListener('click', async () => {
         const pack = game.packs.get("dft.dft-information")
-        const entry = await pack.getDocument(pack.index.get("4yCW3MHkNqswLPWD")._id)
+        const entry = await pack.getDocument(pack.index.get("eRW62Vqw12GWlDeT")._id)
         entry.sheet.render(true)
     })
     div.appendChild(helpButton)
