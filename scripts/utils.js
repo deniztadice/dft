@@ -17,7 +17,7 @@ export const addSidebarInfo = () => {
         </span>
     </li>
     <li class="flexrow system-links dft-sidebar">
-    <a href="https://deniztadice.github.io/dft" target="_blank">${game.i18n.localize("DFT.SOCIAL.GITHUB")}</a>
+    <a href="https://deniztadice.github.io/blog/modules/dft" target="_blank">${game.i18n.localize("DFT.SOCIAL.GITHUB")}</a>
         <a href="https://discord.gg/VDNvWvJMYd" target="_blank">${game.i18n.localize("DFT.SOCIAL.DISCORD")}</a>
         <a href="https://t.me/deniz_ta_dice" target="_blank">${game.i18n.localize("DFT.SOCIAL.TELEGRAM")}</a>
         <a href="https://deniztadice.xyz/" target="_blank">${game.i18n.localize("DFT.SOCIAL.WEBSITE")}</a>
