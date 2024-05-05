@@ -9,3 +9,7 @@
 This module adds stylish text blocks for your journal
 
 Examples you can find [here](https://deniztadice.github.io/dft/en)
+
+### Licence
+
+All images created in Copilot (Microsoft)
