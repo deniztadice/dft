@@ -2,13 +2,13 @@
 # Інструменти Деніза для Foundry 🇺🇦
 Цей модуль додає стилізовані текстові блоки для вашого журналу
 
-Приклади ви можете знайти [тут](http://localhost:4321/blog/modules/dft)
+Приклади ви можете знайти [тут](https://deniztadice.github.io/blog/modules/dft/)
 
 # Deniz's Foundry Tools 🇺🇸
 
 This module adds stylish text blocks for your journal
 
-Examples you can find [here](http://localhost:4321/blog/modules/dft/en)
+Examples you can find [here](https://deniztadice.github.io/blog/en/modules/dft/)
 
 ### Licence
 
