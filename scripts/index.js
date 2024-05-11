@@ -8,8 +8,10 @@ Hooks.once("init", async () => {
 })
 
 Hooks.once("ready", function () {
-    addSidebarInfo()
-    addSettingsSection()
-    welcomeDialog()
+    if(game.users.current.isGM){
+        addSidebarInfo()
+        addSettingsSection()
+        welcomeDialog()   
+    } 
     log("Loaded")
 });

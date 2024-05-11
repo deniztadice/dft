@@ -1,19 +1,21 @@
 {
   "id": "dft",
   "title": "⚒️ Deniz's Foundry Tools | DFT | DTD",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "url": "https://github.com/deniztadice/dft",
   "compatibility": {
     "minimum": "11",
-    "verified": "11"
+    "verified": "12",
+    "maximum": "12"
   },
   "authors": [
     {
       "name": "Deniz Köse",
       "url": "https://deniztadice.xyz",
-      "discord": "denizkose"
+      "discord": "denizkose",
+      "flags": {}
     }
   ],
-  "url":"https://deniztadice.github.io/blog/modules/dft",
   "esmodules": [
     "scripts/utils.js",
     "scripts/welcome.js",
@@ -48,7 +50,8 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      }
+      },
+      "flags": {}
     },
     {
       "name": "dft-journal",
@@ -59,7 +62,8 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      }
+      },
+      "flags": {}
     }
   ],
   "packFolders": [

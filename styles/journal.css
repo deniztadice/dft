@@ -1,5 +1,6 @@
 @import url("fonts.css");
 
+
 /* Foundry reset */
 
 .editor-content.journal-page-content.ProseMirror,
@@ -268,17 +269,17 @@ section.dft header {
   min-height: 40px;
 }
 
-section.dft header span.title,
-section.dft header span.title a {
-  text-transform: uppercase;
+section.dft header p > span.title,
+section.dft header p > span.title a {
   font-size: 1.5rem;
+  text-transform: uppercase;
   margin: 0;
   text-shadow: rgb(0, 0, 0) 1px 0 10px;
   color: white;
   font-weight: 700;
 }
 
-section.dft header span.type {
+section.dft header p > span.type {
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 500;

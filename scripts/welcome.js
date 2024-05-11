@@ -7,7 +7,7 @@ export const welcomeDialog = () => {
         content: `
         <div class="dft-welcome-dialog">
         <h2>${game.i18n.localize("DFT.MAIN.WELCOME.HEADER")}</h2>
-        <p>${game.i18n.localize("DFT.MAIN.WELCOME.READFIRST")} <a class="content-link" draggable="true" data-uuid="Compendium.dft.dft-information.JournalEntry.eRW62Vqw12GWlDeT" data-id="eRW62Vqw12GWlDeT" data-type="JournalEntryPage" data-pack="dft.dft-information" data-tooltip="Text Page"><i class="fas fa-file-lines"></i>${game.i18n.localize("DFT.MAIN.WELCOME.INFORMATION")}</a></p>
+        <p>${game.i18n.localize("DFT.MAIN.WELCOME.READFIRST")} <a class="content-link" draggable="true" data-link data-uuid="Compendium.dft.dft-information.JournalEntry.eRW62Vqw12GWlDeT" data-id="eRW62Vqw12GWlDeT" data-type="JournalEntryPage" data-pack="dft.dft-information" data-tooltip="Text Page"><i class="fas fa-file-lines"></i>${game.i18n.localize("DFT.MAIN.WELCOME.INFORMATION")}</a></p>
         <p>${game.i18n.localize("DFT.MAIN.WELCOME.MORE")}</p>
         <ul class="fa-ul">
         <li class="fa-li"><span class="fa-li"><i class="fa-brands fa-github"></i></span><a href="https://deniztadice.github.io/blog/modules/dft" target="_blank">${game.i18n.localize("DFT.SOCIAL.GITHUB")}</a> 🇺🇦🇺🇸 </li>
