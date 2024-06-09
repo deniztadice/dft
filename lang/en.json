@@ -15,5 +15,6 @@
     "DFT.SOCIAL.SUPPORT_FULL":"Support me on Buy me a coffee",
     "DFT.SETTINGS.BABELE_TITLE":"Automatically activate translation via Babele",
     "DFT.SETTINGS.BABELE_DESC":"Automatically implements Babele translations without needing to point to the directory containing the translations.",
-    "DFT.SIDEBAR.SETTINGS.BUTTON.README":"Readme"
+    "DFT.SIDEBAR.SETTINGS.BUTTON.README":"Readme",
+    "DFT.SIDEBAR.SETTINGS.BUTTON.JOURNAL_COMPONENT":"Journal Component"
 }

@@ -293,7 +293,7 @@ section.dft span.title a.content-link i {
   background: none;
   padding: 0;
   border-radius: unset;
-  color: white;
+  color: white !important;
 }
 section.dft span.title a.content-link:hover {
   text-shadow: 4px 4px 4px rgba(148, 8, 8, 0.5);

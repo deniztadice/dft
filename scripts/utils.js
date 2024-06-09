@@ -1,5 +1,5 @@
 export const MODULE_ID = 'dft';
-export const MODULE_VERSION = '1.0.0';
+export const MODULE_VERSION = '1.0.2';
 export const log = (log) => {
     const modName = '%cDFT | '
     const consoleStyle = 'color: green; font-weight:bold'
@@ -37,14 +37,15 @@ export const addSettingsSection = () => {
     header.innerText = game.i18n.localize("DFT.MAIN.NAME_SHORT")
     const div = document.createElement('div')
     div.classList = ['dft-sidebar']
-    const helpButton = document.createElement('button')
-    helpButton.innerHTML = '<i class="fa-solid fa-circle-info"></i></i>' + game.i18n.localize("DFT.SIDEBAR.SETTINGS.BUTTON.README")
-    helpButton.addEventListener('click', async () => {
-        const pack = game.packs.get("dft.dft-information")
-        const entry = await pack.getDocument(pack.index.get("eRW62Vqw12GWlDeT")._id)
+    const journalComponent = document.createElement('button')
+    journalComponent.innerHTML = '<i class="fa-solid fa-circle-info"></i></i>' + game.i18n.localize("DFT.SIDEBAR.SETTINGS.BUTTON.JOURNAL_COMPONENT")
+    journalComponent.addEventListener('click', async () => {
+        const lang = game.i18n.lang
+        const pack = game.packs.get("dft.dft-journal")
+        const entry = await pack.getDocument(pack.index.get(lang==='uk'? "6X18bTQODOupr2Jp": "5DR7lZZUgrQVTCf2")._id)
         entry.sheet.render(true)
     })
-    div.appendChild(helpButton)
+    div.appendChild(journalComponent)
     child.after(header)
     header.after(div)
 }
